@@ -260,6 +260,16 @@
                     n(i)
                 });
                 return Q.set(t, o), o
+                $(".mix").each(function(index) {
+                      var mix = this;
+
+                      $(".tag-text", this).each(function() {
+                          var tagtext = $(this).text();
+                          console.log( tagtext );
+                          var tagtextnospaces = tagtext.replace(/\s/g, '');
+                          $(mix).addClass(tagtextnospaces);
+                      });
+                  });
             } catch (e) {
                 return null
             }
